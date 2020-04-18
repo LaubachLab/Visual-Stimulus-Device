@@ -5,7 +5,7 @@
 #include <Adafruit_LEDBackpack.h>
 
 // NUMBER OF LED DEVICES
-int d = 3
+const int d = 3;
 
 // declare 3 LED matrices
 Adafruit_8x8matrix matrix [d];
@@ -79,7 +79,7 @@ void loop() {
       clear();
       break;
       
-    case(1); // Input 1 ON
+    case(1): // Input 1 ON
     // 8 - - 
       clear();
       matrix[0].drawPixel(random(0,8), random(0,8), LED_ON);
@@ -297,6 +297,4 @@ void loop() {
       display();
       break;
   }
-  
-
 }
